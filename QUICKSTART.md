@@ -38,7 +38,8 @@ python app.py
 ✅ Image upload feature
 ✅ Real-time skin tone detection
 ✅ AI-powered fashion recommendations
-✅ Shopping links to Amazon, Myntra, Zara
+✅ Select your style: Casual, Formal, Streetwear, etc.
+✅ Shopping links to Amazon, Flipkart, Myntra, Ajio
 ✅ Responsive mobile-friendly design
 
 ---

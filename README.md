@@ -6,8 +6,9 @@ StyleAI is a professional web application that leverages Groq's LLaMA 3.3 70B AI
 
 - **🎯 Skin Tone Analysis:** Automatically detects skin tone (Fair, Medium, Olive, Deep) from user-uploaded photos
 - **🤖 AI Fashion Consultant:** Uses LLaMA 3.3 70B via Groq API for personalized styling advice
+- **🎭 Style Preferences:** Choose from Casual, Formal, Streetwear, Ethnic, Minimalist, Sporty, Party, or Smart Casual
 - **👥 Gender-Specific Recommendations:** Tailored outfits for Men, Women, and Non-Binary users
-- **🛍️ Smart Shopping:** Direct search links for Amazon.in, Myntra, and Zara
+- **🛍️ Smart Shopping:** Direct search links for Amazon.in, Myntra, Flipkart, and Ajio
 - **⚡ Fast & Professional:** Built with Flask and modern web technologies
 
 ## Prerequisites
@@ -43,7 +44,7 @@ Leave the `.env` file empty. You can paste the API key directly in the web app w
 ## Running the Application
 
 ```bash
-python app_flask.py
+python app.py
 ```
 
 The application will be available at: **http://127.0.0.1:5000**
@@ -53,10 +54,10 @@ Open your browser and navigate to the URL above. The app will automatically load
 ## How It Works
 
 1. **Upload Photo** - Upload a clear facial photo (JPG or PNG)
-2. **Select Gender** - Choose your gender (Female, Male, Non-Binary)
+2. **Select Gender & Style** - Choose your gender and desired fashion style (e.g., Streetwear, Minimalist)
 3. **AI Analysis** - System detects your skin tone using computer vision
-4. **Get Styled** - LLaMA AI generates personalized recommendations
-5. **Shop** - Direct links to buy suggested items from top retailers
+4. **Get Styled** - LLaMA AI generates personalized recommendations matching your selected style
+5. **Shop** - Direct links to buy suggested items from Amazon, Flipkart, Myntra, and Ajio
 
 ## Tech Stack
 
@@ -71,7 +72,7 @@ Open your browser and navigate to the URL above. The app will automatically load
 
 ```
 Generative_AI_Powered_Fashion_Recommendation/
-├── app_flask.py              # Flask application entry point
+├── app.py                    # Flask application entry point
 ├── utils.py                  # Image processing & skin tone detection
 ├── groq_client.py            # Groq API integration
 ├── requirements.txt          # Python dependencies
