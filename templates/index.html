@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleAI - AI Fashion Recommendation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container-lg">
+            <a class="navbar-brand fw-bold text-gradient" href="#home">
+                <span class="me-2">✨</span>StyleAI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" title="Toggle navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#app">Try It</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container-lg">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 pe-lg-5">
+                    <h1 class="display-4 fw-bold mb-4">AI-Powered Fashion Styling</h1>
+                    <p class="lead text-muted mb-4">Experience personalized fashion recommendations powered by advanced AI. Upload your photo and discover the perfect colors and styles tailored to your unique skin tone.</p>
+                    <a href="#app" class="btn btn-gradient btn-lg">Get Started</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-grid">
+                        <div class="grid-item"><img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&q=80" alt="Fashion 1"></div>
+                        <div class="grid-item"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=400&q=80" alt="Fashion 2"></div>
+                        <div class="grid-item"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80" alt="Fashion 3"></div>
+                        <div class="grid-item"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&q=80" alt="Fashion 4"></div>
+                        <div class="grid-item"><img src="https://images.unsplash.com/photo-1463107971871-fbac9ddb920f?w=400&q=80" alt="Fashion 5"></div>
+                        <div class="grid-item"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&q=80" alt="Fashion 6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section py-5">
+        <div class="container-lg">
+            <h2 class="text-center display-6 fw-bold mb-5">Why Choose StyleAI?</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">📷</div>
+                        <h5 class="mt-3">Instant Analysis</h5>
+                        <p class="text-muted">Upload a photo and get AI-powered results in seconds.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">🎨</div>
+                        <h5 class="mt-3">Color Matching</h5>
+                        <p class="text-muted">Recommendations matched to your skin tone perfectly.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">🛍️</div>
+                        <h5 class="mt-3">Shopping Links</h5>
+                        <p class="text-muted">Direct links to buy from Amazon, Myntra & Zara.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card h-100">
+                        <div class="feature-icon">⭐</div>
+                        <h5 class="mt-3">Professional Tips</h5>
+                        <p class="text-muted">Expert styling advice & accessory recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="howitworks" class="howitworks-section py-5">
+        <div class="container-lg">
+            <h2 class="text-center display-6 fw-bold mb-5">How StyleAI Works</h2>
+            <div class="row g-4">
+                <!-- Step 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h5>Upload Your Photo</h5>
+                        <p>Share a clear photo of yourself for analysis</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h5>AI Analysis</h5>
+                        <p>Our AI detects your skin tone and analyzes your features</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h5>Get Recommendations</h5>
+                        <p>Receive personalized styling advice tailored to you</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h5>Shop & Style</h5>
+                        <p>Access direct links to purchase recommended items</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="app" class="app-section py-5">
+        <div class="container-lg">
+            <h2 class="text-center display-6 fw-bold mb-5">Try StyleAI Now</h2>
+            
+            <div class="row g-4">
+                <!-- Upload Column -->
+                <div class="col-lg-5">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body p-4">
+                            <h5 class="card-title mb-4">Get Your Style Recommendation</h5>
+                            
+                            <!-- Tabs for Upload/Camera -->
+                            <div class="btn-group w-100 mb-4" role="tablist">
+                                <button type="button" class="btn btn-outline-secondary flex-fill active" id="uploadTab" data-mode="upload">📁 Upload Photo</button>
+                                <button type="button" class="btn btn-outline-secondary flex-fill" id="cameraTab" data-mode="camera">📷 Use Camera</button>
+                            </div>
+                            
+                            <form id="analyzeForm" enctype="multipart/form-data">
+                                <!-- Gender Selection -->
+                                <div class="mb-3">
+                                    <label for="gender" class="form-label">Select Gender</label>
+                                    <select class="form-select" id="gender">
+                                        <option value="Female">Female</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Non-Binary">Non-Binary</option>
+                                    </select>
+                                </div>
+
+                                <!-- Upload Mode -->
+                                <div id="uploadMode">
+                                    <div class="mb-3">
+                                        <label for="photoInput" class="form-label">Upload Photo</label>
+                                        <input type="file" class="form-control" id="photoInput" 
+                                               accept=".jpg,.jpeg,.png">
+                                        <small class="text-muted d-block mt-1">JPG or PNG • Max 16MB • Clear facial photo recommended</small>
+                                    </div>
+
+                                    <!-- Preview -->
+                                    <div id="previewContainer" class="mb-3">
+                                        <img id="preview" src="" alt="Preview" class="img-fluid rounded" style="display:none;">
+                                    </div>
+                                </div>
+
+                                <!-- Camera Mode -->
+                                <div id="cameraMode" style="display:none;">
+                                    <div class="mb-3">
+                                        <video id="cameraFeed" class="w-100 rounded" autoplay playsinline muted style="background: #000; transform: scaleX(-1); display: none;"></video>
+                                        <div id="cameraLoading" style="display: none; text-align: center; padding: 2rem; background: #f5f5f5; border-radius: 12px;">
+                                            <p class="text-muted">🎥 Camera is starting...</p>
+                                            <div class="spinner-border" role="status" style="color: #E85B89;">
+                                                <span class="visually-hidden">Loading...</span>
+                                            </div>
+                                        </div>
+                                        <canvas id="captureCanvas" style="display:none;"></canvas>
+                                    </div>
+                                    
+                                    <!-- Zoom Controls -->
+                                    <div class="mb-3 zoom-controls" id="zoomControls" style="display:none;">
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <button type="button" class="btn btn-sm btn-outline-primary" id="zoomOutBtn">🔍− Zoom Out</button>
+                                            <input type="range" id="zoomSlider" class="form-range zoom-slider" min="1" max="5" step="0.5" value="1" style="flex: 1;">
+                                            <button type="button" class="btn btn-sm btn-outline-primary" id="zoomInBtn">🔍+ Zoom In</button>
+                                        </div>
+                                        <small class="text-muted d-block mt-2">Current Zoom: <span id="zoomLevel">1x</span></small>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <button type="button" class="btn btn-gradient w-100" id="startCameraBtn">
+                                            <span>🎥 Start Camera</span>
+                                        </button>
+                                        <button type="button" class="btn btn-success w-100 mt-2" id="captureBtn" style="display:none;">
+                                            <span>📸 Capture Photo</span>
+                                        </button>
+                                        <button type="button" class="btn btn-danger w-100 mt-2" id="stopCameraBtn" style="display:none;">
+                                            <span>🛑 Stop Camera</span>
+                                        </button>
+                                    </div>
+                                    <div id="cameraPreviewContainer" class="mb-3">
+                                        <img id="cameraPreview" src="" alt="Captured Preview" class="img-fluid rounded" style="display:none;">
+                                    </div>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <button type="submit" class="btn btn-gradient w-100" id="submitBtn">
+                                    <span id="btnText">Analyze & Style Me!</span>
+                                    <span id="spinner" class="spinner-border spinner-border-sm ms-2" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </span>
+                                </button>
+                            </form>
+
+                            <!-- Status Messages -->
+                            <div id="alertContainer" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Column -->
+                <div class="col-lg-7">
+                    <!-- Loading State -->
+                    <div id="loadingContainer" class="loading-overlay">
+                        <div class="loading-content">
+                            <div class="loading-image-wrapper">
+                                <img id="loadingPreview" src="" alt="Processing" class="loading-image">
+                                <div class="loading-spinner-ring">
+                                    <div class="spinner-circle"></div>
+                                </div>
+                            </div>
+                            <div class="loading-text mt-4">
+                                <h5 class="text-white mb-3">Analyzing your style...</h5>
+                                <div class="progress" style="height: 6px; background: rgba(255,255,255,0.2);">
+                                    <div class="progress-bar progress-bar-animated" role="progressbar" style="width: 100%; background: linear-gradient(90deg, #2563eb, #06b6d4);"></div>
+                                </div>
+                                <p class="text-white-50 mt-2 small">Processing your photo with AI...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="resultsContainer">
+                        <!-- Skin Tone Detection -->
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-body p-4">
+                                <h5 class="card-title">Detected Skin Tone & Face Shape</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <div id="colorBox"></div>
+                                            <div>
+                                                <p class="mb-0"><strong id="skintoneText">Fair</strong></p>
+                                                <small class="text-muted">Skin tone detected</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div>
+                                            <p class="mb-0"><strong id="faceshapeText">Oval</strong></p>
+                                            <small class="text-muted">👤 Face shape for hairstyle recommendations</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recommendations -->
+                        <div class="card border-0 shadow-sm mb-4">
+                            <div class="card-body p-4">
+                                <h5 class="card-title mb-3">Your Style Guide</h5>
+                                <div id="recommendationsContent" class="recommendations-text">
+                                    <!-- Content will be inserted here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shopping Guide -->
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h5 class="card-title mb-4">Shop Your Style</h5>
+                                <div id="shoppingGuide" class="shopping-grid">
+                                    <!-- Product cards will be inserted here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="placeholderContainer">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4 text-center">
+                                <div class="emoji-icon">📸</div>
+                                <h5>How It Works</h5>
+                                <ol class="text-start mt-3 text-muted">
+                                    <li><strong>Upload a photo</strong> - A clear facial photo works best</li>
+                                    <li><strong>We analyze</strong> - Detect your skin tone using AI</li>
+                                    <li><strong>Get styled</strong> - Receive personalized recommendations</li>
+                                    <li><strong>Shop now</strong> - Direct links to top retailers</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <h2 class="display-5 fw-bold mb-5 text-center" style="color: #000000;">About StyleAI</h2>
+                    
+                    <div class="row g-4">
+                        <!-- Main Description -->
+                        <div class="col-lg-8">
+                            <p class="lead mb-4" style="color: #000000; line-height: 1.8;">
+                                <strong>StyleAI</strong> is an intelligent fashion advisory platform that leverages cutting-edge artificial intelligence to provide personalized styling recommendations based on your unique complexion and preferences.
+                            </p>
+                            
+                            <h5 class="fw-bold mb-3" style="color: #000000;">How It Works</h5>
+                            <p style="color: #000000; line-height: 1.8;">
+                                Our advanced system analyzes your uploaded photo to detect your skin tone, using computer vision technology. We then leverage Groq's powerful LLaMA 3.3 70B AI model to generate curated color recommendations, styling advice, and direct shopping links from top retailers—all tailored specifically to complement your complexion.
+                            </p>
+                            
+                            <h5 class="fw-bold mb-3 mt-4" style="color: #000000;">Why Choose StyleAI?</h5>
+                            <div class="p-4 rounded-3" style="background: #ffffff; border: 2px solid #E85B89; box-shadow: 0 5px 15px rgba(232, 91, 137, 0.1);">
+                                <ul style="color: #000000; line-height: 2; margin-bottom: 0;">
+                                    <li><strong>AI-Powered Analysis:</strong> Advanced skin tone detection using computer vision</li>
+                                    <li><strong>Personalized Recommendations:</strong> Tailored advice based on your unique features</li>
+                                    <li><strong>Fast & Reliable:</strong> Instant results powered by LLaMA 3.3 70B</li>
+                                    <li><strong>Practical Shopping:</strong> Direct links to purchase recommended items</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Tech Stack -->
+                        <div class="col-lg-4">
+                            <div class="p-4 rounded-3" style="background: #ffffff; border: 2px solid #E85B89; box-shadow: 0 5px 15px rgba(232, 91, 137, 0.1);">
+                                <h5 class="fw-bold mb-3" style="color: #000000;">Technology Stack</h5>
+                                <div style="color: #000000; line-height: 2;">
+                                    <p class="mb-2"><strong>Backend:</strong> Flask</p>
+                                    <p class="mb-2"><strong>AI Model:</strong> Groq LLaMA 3.3 70B</p>
+                                    <p class="mb-2"><strong>Computer Vision:</strong> OpenCV, NumPy</p>
+                                    <p class="mb-2"><strong>Image Processing:</strong> Pillow (PIL)</p>
+                                    <p class="mb-2"><strong>Frontend:</strong> Bootstrap 5, JavaScript</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section mt-5">
+        <div class="container-lg py-3">
+            <div class="row g-3">
+                <!-- About Section -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-title mb-2">About StyleAI</h6>
+                    <p class="footer-text text-muted mb-2">
+                        Your personal AI fashion stylist powered by advanced computer vision and artificial intelligence.
+                    </p>
+                    <div class="mt-2">
+                        <small class="text-muted d-block">📧 support@styleai.com</small>
+                        <small class="text-muted d-block">🌐 StyleAI.com</small>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-title mb-2">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-1"><a href="#home" class="footer-link">Home</a></li>
+                        <li class="mb-1"><a href="#features" class="footer-link">Features</a></li>
+                        <li class="mb-1"><a href="#app" class="footer-link">Try It</a></li>
+                        <li class="mb-1"><a href="#about" class="footer-link">About</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-title mb-2">Resources</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-1"><a href="https://groq.com/docs" class="footer-link" target="_blank" rel="noopener noreferrer">Groq Documentation</a></li>
+                        <li class="mb-1"><a href="https://github.com" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li class="mb-1"><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li class="mb-1"><a href="#" class="footer-link">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="footer-title mb-2">Connect With Us</h6>
+                    <div class="footer-social mb-2">
+                        <a href="#" class="footer-social-link" title="Twitter">𝕏</a>
+                        <a href="#" class="footer-social-link" title="Facebook">f</a>
+                        <a href="#" class="footer-social-link" title="Instagram">📷</a>
+                        <a href="#" class="footer-social-link" title="LinkedIn">in</a>
+                    </div>
+                    <div class="footer-newsletter">
+                        <p class="small text-muted mb-1">Subscribe to newsletter</p>
+                        <div class="input-group input-group-sm">
+                            <input type="email" class="form-control" placeholder="Email">
+                            <button class="btn btn-gradient" type="button">→</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr class="my-2 border-secondary">
+
+            <!-- Bottom Footer -->
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted"><small>&copy; 2024 StyleAI. All rights reserved.</small></p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-muted"><small>Powered by <a href="https://groq.com" class="footer-link" target="_blank" rel="noopener noreferrer">Groq LLaMA</a> • Made with ❤️</small></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- StyleBot Chat Widget -->
+    <div id="stylebot-widget">
+        <!-- Greeting Bubble -->
+        <div id="stylebot-bubble">
+            <span>👋 Hi! I'm StyleBot</span>
+        </div>
+        
+        <!-- Circular Trigger -->
+        <div id="stylebot-trigger">
+            <img src="{{ url_for('static', filename='bot-icon.svg') }}" alt="StyleBot Icon">
+        </div>
+
+        <!-- Chat Container (Hidden by default) -->
+        <div id="stylebot-chat-container" style="display: none;">
+            <div id="stylebot-header">
+                <div class="d-flex align-items-center">
+                    <img src="{{ url_for('static', filename='bot-icon.svg') }}" alt="Bot Icon" class="bot-header-icon me-2">
+                    <span class="stylebot-title">StyleBot</span>
+                </div>
+                <button id="stylebot-close" class="btn btn-sm btn-link text-white">
+                    <span>✖</span>
+                </button>
+            </div>
+            <div id="stylebot-messages">
+                <div class="bot-message-wrapper">
+                    <img src="{{ url_for('static', filename='bot-icon.svg') }}" alt="Bot Icon" class="bot-msg-icon">
+                    <div class="bot-message">Hello! I'm StyleBot, your personal fashion assistant. How can I help you today?</div>
+                </div>
+            </div>
+            <div id="stylebot-input-area">
+                <input type="text" id="stylebot-input" placeholder="Ask StyleBot anything..." autocomplete="off">
+                <button id="stylebot-send" class="btn btn-primary btn-sm">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

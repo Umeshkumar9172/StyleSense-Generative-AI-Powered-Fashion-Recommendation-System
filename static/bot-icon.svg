@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+    <!-- Outer Circle -->
+    <circle cx="50" cy="50" r="45" fill="#1a1a2e" stroke="#30304a" stroke-width="2"/>
+    
+    <!-- Robot Face -->
+    <rect x="25" y="35" width="50" height="40" rx="8" fill="#E85B89"/>
+    
+    <!-- Eyes -->
+    <circle cx="40" cy="50" r="4" fill="white"/>
+    <circle cx="60" cy="50" r="4" fill="white"/>
+    
+    <!-- Antenna -->
+    <line x1="50" y1="35" x2="50" y2="25" stroke="#E85B89" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="50" cy="22" r="5" fill="#E85B89"/>
+    
+    <!-- Mouth -->
+    <path d="M40 65 Q50 70 60 65" stroke="white" stroke-width="2" stroke-linecap="round"/>
+</svg>
