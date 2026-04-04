@@ -234,6 +234,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         
         const gender = document.getElementById('gender').value;
+        const stylePreference = document.getElementById('stylePreference').value;
         
         let fileToAnalyze = null;
         let previewSource = null;
@@ -279,6 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         formData.append('gender', gender);
+        formData.append('style_preference', stylePreference);
 
         try {
             const response = await fetch('/api/analyze', {

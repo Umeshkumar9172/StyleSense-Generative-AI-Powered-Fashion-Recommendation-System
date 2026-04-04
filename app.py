@@ -41,9 +41,11 @@ def analyze():
         
         file = request.files['file']
         gender = request.form.get('gender', 'Female')
+        style_preference = request.form.get('style_preference', '')
         
         print(f"File received: {file.filename}")
         print(f"Gender: {gender}")
+        print(f"Style Preference: {style_preference}")
         
         if file.filename == '':
             print("File has empty filename")
@@ -82,7 +84,8 @@ def analyze():
             groq_response = groq_service.get_fashion_recommendations(
                 analysis_result['skin_tone'],
                 gender,
-                analysis_result.get('face_shape', 'Oval')
+                analysis_result.get('face_shape', 'Oval'),
+                style_preference
             )
             
             if isinstance(groq_response, dict) and groq_response.get('success') is False:

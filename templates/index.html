@@ -150,13 +150,29 @@
                             
                             <form id="analyzeForm" enctype="multipart/form-data">
                                 <!-- Gender Selection -->
-                                <div class="mb-3">
-                                    <label for="gender" class="form-label">Select Gender</label>
-                                    <select class="form-select" id="gender">
-                                        <option value="Female">Female</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Non-Binary">Non-Binary</option>
-                                    </select>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="gender" class="form-label">Select Gender</label>
+                                        <select class="form-select" id="gender">
+                                            <option value="Female">Female</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Non-Binary">Non-Binary</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="stylePreference" class="form-label">Style Preference</label>
+                                        <select class="form-select" id="stylePreference">
+                                            <option value="">Default (Smart Casual)</option>
+                                            <option value="Casual">Casual</option>
+                                            <option value="Formal">Formal</option>
+                                            <option value="Streetwear">Streetwear</option>
+                                            <option value="Ethnic">Ethnic</option>
+                                            <option value="Minimalist">Minimalist</option>
+                                            <option value="Sporty">Sporty</option>
+                                            <option value="Party">Party</option>
+                                            <option value="Smart Casual">Smart Casual</option>
+                                        </select>
+                                    </div>
                                 </div>
 
                                 <!-- Upload Mode -->
