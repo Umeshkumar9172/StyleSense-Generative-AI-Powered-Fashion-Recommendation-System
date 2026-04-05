@@ -24,6 +24,10 @@ def allowed_file(filename):
 
 groq_service = GroqService()
 
+# Export for Vercel
+# Vercel's Python builder looks for an object named 'app' at the top level
+# We ensure it's available here
+# app = app 
 
 @app.route('/')
 def index():
