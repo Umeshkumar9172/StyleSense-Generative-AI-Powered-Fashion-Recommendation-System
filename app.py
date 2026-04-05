@@ -15,7 +15,11 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
 # Create uploads folder if it doesn't exist
-os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+if not os.path.exists(app.config['UPLOAD_FOLDER']):
+    try:
+        os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
+    except Exception as e:
+        print(f"Could not create upload folder (standard for serverless): {e}")
 
 ALLOWED_EXTENSIONS = {'jpg', 'jpeg', 'png'}
 
@@ -24,10 +28,12 @@ def allowed_file(filename):
 
 groq_service = GroqService()
 
-# Export for Vercel
-# Vercel's Python builder looks for an object named 'app' at the top level
-# We ensure it's available here
+# For Vercel, the app must be accessible at the top level
 # app = app 
+
+# Define handlers for Vercel Serverless Functions
+def handler(event, context):
+    return app(event, context)
 
 @app.route('/')
 def index():
@@ -69,9 +75,24 @@ def analyze():
         
         # Analyze skin tone
         print("Starting skin tone analysis...")
+        
         # Seek to beginning just in case
         file.seek(0)
-        analysis_result = analyze_skin_tone(file)
+        
+        # In serverless environments, we handle the file in memory or use /tmp
+        # For Vercel, we can try to pass the file pointer directly first,
+        # but if that fails, we use a temporary path.
+        try:
+            # First try direct file pointer (standard Flask)
+            analysis_result = analyze_skin_tone(file)
+        except Exception as e:
+            print(f"Direct file analysis failed: {str(e)}. Trying /tmp...")
+            file.seek(0)
+            temp_path = os.path.join('/tmp', secure_filename(file.filename))
+            file.save(temp_path)
+            analysis_result = analyze_skin_tone(temp_path)
+            if os.path.exists(temp_path):
+                os.remove(temp_path)
         
         print(f"Analysis result: {analysis_result}")
         
