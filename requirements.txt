@@ -1,6 +1,6 @@
 flask
 groq
-opencv-python
+opencv-python-headless
 numpy
 Pillow
 python-dotenv
